@@ -1,14 +1,5 @@
 function largestOfFour(arr) {
-  const four = [];
-  for (let i = 0; i < arr.length; i++) {
-    let largest = arr[i][0];
-    for (let j = 0; j < arr[i].length; j++) {
-      if (largest < arr[i][j]) {
-        largest = arr[i][j];
-      }
-    }
-    four.push(largest);
-  }
+  const four = arr.map((subArr) => Math.max(...subArr));
   return four;
 }
 
