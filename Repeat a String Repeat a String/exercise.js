@@ -2,13 +2,9 @@ function repeatStringNumTimes(str, num) {
   if (num <= 0) {
     return '';
   }
-  let newStr = '';
-
-  for (let i = 0; i < num; i++) {
-    newStr = newStr.concat(str);
+  if (num > 0) {
+    return str.concat(repeatStringNumTimes(str, num - 1));
   }
-
-  return newStr;
 }
 
 repeatStringNumTimes('abc', 3);
