@@ -1,12 +1,6 @@
 function confirmEnding(str, target) {
-  const newStr = str.split('');
-  if (target.length === 1) {
-    const location = newStr.length - 1;
-    return newStr[location] === target ? true : false;
-  } else {
-    const location = newStr.length - target.length;
-    const tempStr = newStr.slice(location, newStr.length).join('');
-    console.log(tempStr);
-    return tempStr === target ? true : false;
-  }
+  const splitStr = str.split('');
+  const location = splitStr.length - target.length;
+  const tempStr = splitStr.slice(location, splitStr.length).join('');
+  return tempStr === target ? true : false;
 }
